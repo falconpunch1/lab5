@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Volunteer Form</title>
+</head>
+
+
+<body>
+
+<!-- Will send this info to this site in order to give user confirmation screen -->
+<form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="post">
+
+    <!-- First section, asks for personal details, contact information -->
+    <fieldset>
+        <legend>Your Info</legend>
+
+        <label>First Name:</label>
+        <input type="text" id="first_name_field" name="first_name_field" required><br>
+
+        <label>Last Name:</label>
+        <input type="text" id="last_name_field" name="last_name_field" required><br>
+
+        <label>Phone Number:</label>
+        <input type="text" id="phone_field" name="phone_field" required><br>
+
+        <label>Email:</label>
+        <input type="email" id="email_field" name="email_field" required><br>
+
+        <label>Gender:</label><br>
+
+        <label>Male</label>
+        <input type="radio" name="gender_field" value="Male">
+        <label>Female</label>
+        <input type="radio" name="gender_field" value="Female"><br>
+
+        <label>Age:</label>
+        <select id="age_field" name="age_field">
+            <option>Under 18</option>
+            <option>Over 18</option>
+        </select><br>
+
+    </fieldset>
+
+    <!-- Second section, asks for availability, any comments or concerns at the bottom -->
+    <fieldset>
+        <legend>Your Availability</legend>
+        <h3>Days Available:</h3>
+
+        <label>Sunday</label>
+        <input type="checkbox" id="available_days_sunday" name="available_field[]" value="Sunday"><br>
+
+        <label>Monday</label>
+        <input type="checkbox" id="available_days_monday" name="available_field[]" value="Monday"><br>
+
+        <label>Tuesday</label>
+        <input type="checkbox" id="available_days_tuesday" name="available_field[]" value="Tuesday"><br>
+
+        <label>Wednesday</label>
+        <input type="checkbox" id="available_days_wednesday" name="available_field[]" value="Wednesday"><br>
+
+        <label>Thursday</label>
+        <input type="checkbox" id="available_days_thursday" name="available_field[]" value="Thursday"><br>
+
+        <label>Friday</label>
+        <input type="checkbox" id="available_days_friday" name="available_field[]" value="Friday"><br>
+
+        <label>Saturday</label>
+        <input type="checkbox" id="available_days_saturday" name="available_field[]" value="Saturday"><br>
+
+        <!-- Comments or concerns are written here, to be sent to the form and whoever manages it -->
+        <h3>Comments</h3>
+        <textarea id="comments_field" name="comments_field"></textarea><br>
+    </fieldset>
+
+    <!-- Implementing the hidden field -->
+    <input type="hidden" id="hidden_field" name="hidden_field" value="David Medina">
+
+
+    <!-- Submit button, all info is sent to IIT for processing and confirmation screen -->
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
